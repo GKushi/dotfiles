@@ -1,0 +1,5 @@
+qview 7.1-2
+qview-debug 7.1-2
+yay 12.5.0-1
+yay-debug 12.5.0-1
+zen-browser-bin 1.14.11b-1
