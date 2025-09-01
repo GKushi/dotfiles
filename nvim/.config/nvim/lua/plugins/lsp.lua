@@ -89,6 +89,7 @@ return {
         pyright = {},
         ts_ls = {},
         prismals = {},
+        eslint = {},
       },
       others = {},
     }
