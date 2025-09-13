@@ -17,6 +17,7 @@ exfatprogs
 fastfetch
 firefox
 git
+globalprotect-openconnect-git
 grim
 gst-plugin-pipewire
 htop
@@ -75,5 +76,6 @@ yay-debug
 zathura
 zathura-pdf-mupdf
 zen-browser-bin
+zoom
 zram-generator
 zsh
