@@ -2,6 +2,7 @@ amd-ucode
 android-studio
 base
 base-devel
+beekeeper-studio-bin
 blueman
 bluez
 bluez-utils
@@ -41,6 +42,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polkit-kde-agent
+postgresql
 postman-bin
 qt5-wayland
 qt6-wayland
@@ -76,6 +78,5 @@ yay-debug
 zathura
 zathura-pdf-mupdf
 zen-browser-bin
-zoom
 zram-generator
 zsh
