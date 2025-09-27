@@ -23,10 +23,13 @@ grim
 gst-plugin-pipewire
 htop
 hyprland
+hyprlock
 hyprpaper
 iwd
 kde-cli-tools
+kimageformats
 kitty
+libheif
 libpulse
 linux
 linux-firmware
@@ -45,6 +48,7 @@ polkit-kde-agent
 postgresql
 postman-bin
 qt5-wayland
+qt6-imageformats
 qt6-wayland
 qview
 rbw
