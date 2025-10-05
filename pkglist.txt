@@ -78,7 +78,6 @@ xf86-video-ati
 xorg-server
 xorg-xinit
 yay
-yay-debug
 zathura
 zathura-pdf-mupdf
 zen-browser-bin
