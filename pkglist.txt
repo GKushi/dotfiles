@@ -38,6 +38,7 @@ man-db
 nano
 neovim
 nvm
+obs-studio
 openssh
 pacman-contrib
 pipewire
@@ -62,6 +63,8 @@ ttf-jetbrains-mono-nerd
 unzip
 uwsm
 vim
+vlc
+vlc-plugins-all
 vulkan-radeon
 waybar
 wget
