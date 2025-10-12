@@ -26,6 +26,7 @@ hyprland
 hyprlock
 hyprpaper
 iwd
+jdk-openjdk
 kde-cli-tools
 kimageformats
 kitty
@@ -57,6 +58,8 @@ rsync
 slurp
 smartmontools
 sof-firmware
+tesseract-data-eng
+tesseract-data-pol
 thunderbird
 tmux
 ttf-jetbrains-mono-nerd
@@ -84,5 +87,6 @@ yay
 zathura
 zathura-pdf-mupdf
 zen-browser-bin
+zip
 zram-generator
 zsh
