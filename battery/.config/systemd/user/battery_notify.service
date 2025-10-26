@@ -1,0 +1,5 @@
+[Unit]
+Description=Battery level notification
+
+[Service]
+ExecStart=%h/.local/bin/battery_notify.sh
