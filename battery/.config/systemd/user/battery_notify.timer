@@ -1,9 +1,9 @@
 [Unit]
-Description=Check battery every 5 minutes
+Description=Check battery every 3 minutes
 
 [Timer]
 OnBootSec=2min
-OnUnitActiveSec=5min
+OnUnitActiveSec=3min
 
 [Install]
 WantedBy=timers.target

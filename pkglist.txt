@@ -7,6 +7,7 @@ blueman
 bluez
 bluez-utils
 brightnessctl
+chromium
 copyq
 cursor-bin
 docker
@@ -18,7 +19,7 @@ exfatprogs
 fastfetch
 firefox
 git
-globalprotect-openconnect-git
+globalprotect-openconnect-git-debug
 grim
 gst-plugin-pipewire
 htop
@@ -40,6 +41,7 @@ nano
 neovim
 nvm
 obs-studio
+openconnect
 openssh
 pacman-contrib
 pipewire
@@ -58,6 +60,7 @@ rsync
 slurp
 smartmontools
 sof-firmware
+tcpdump
 tesseract-data-eng
 tesseract-data-pol
 thunderbird
