@@ -1,8 +1,10 @@
 android-studio 2025.2.1.7-1
-beekeeper-studio-bin 5.4.9-1
-cursor-bin 2.0.69-1
-docker-desktop 4.50.0-1
-docker-desktop-debug 4.50.0-1
+beekeeper-studio-bin 5.4.10-1
+beekeeper-studio-bin-debug 5.4.10-1
+botan2 2.19.5-2
+cursor-bin 2.0.77-1
+docker-desktop 4.51.0-1
+docker-desktop-debug 4.51.0-1
 globalprotect-openconnect-git-debug 1.4.9-1
 postman-bin 11.70.6-1
 qview 7.1-2

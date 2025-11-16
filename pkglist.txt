@@ -8,6 +8,7 @@ bluez
 bluez-utils
 brightnessctl
 chromium
+clang
 copyq
 cursor-bin
 docker
@@ -19,6 +20,7 @@ exfatprogs
 fastfetch
 firefox
 git
+glfw
 globalprotect-openconnect-git-debug
 grim
 gst-plugin-pipewire
@@ -39,6 +41,7 @@ ly
 man-db
 nano
 neovim
+ninja
 nvm
 obs-studio
 openconnect
