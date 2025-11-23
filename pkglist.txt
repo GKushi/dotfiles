@@ -21,7 +21,6 @@ fastfetch
 firefox
 git
 glfw
-globalprotect-openconnect-git-debug
 grim
 gst-plugin-pipewire
 htop

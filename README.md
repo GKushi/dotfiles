@@ -8,3 +8,7 @@ Regenerate with:
 ```bash
 pacman -Qqe > pkglist.txt
 yay -Qm > aurlist.txt
+```
+
+## Next ideas
+- Disk encryption
