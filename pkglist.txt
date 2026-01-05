@@ -30,6 +30,7 @@ hyprpaper
 iwd
 jdk-openjdk
 kde-cli-tools
+kdeconnect
 kimageformats
 kitty
 kolourpaint
@@ -44,6 +45,7 @@ neovim
 ninja
 nvm
 obs-studio
+openbsd-netcat
 openconnect
 openssh
 pacman-contrib

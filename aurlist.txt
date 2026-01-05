@@ -2,7 +2,7 @@ android-studio 2025.2.2.8-1
 beekeeper-studio-bin 5.4.12-1
 beekeeper-studio-bin-debug 5.4.12-1
 botan2 2.19.5-2
-cursor-bin 2.3.20-1
+cursor-bin 2.3.21-1
 docker-desktop 4.55.0-1
 docker-desktop-debug 4.55.0-1
 postman-bin 11.77.2-1

@@ -114,3 +114,8 @@ source /usr/share/nvm/init-nvm.sh
 alias rbwp="rbw get --clipboard"
 alias rbwu="rbw get --clipboard --field username"
 alias rbwl="rbw list | grep"
+alias ip-share="kdeconnect-cli -n \"Kasper iPhone\" --share"
+alias ip-share-text="kdeconnect-cli -n \"Kasper iPhone\" --share-text"
+alias ip-share-clipboard="kdeconnect-cli -n \"Kasper iPhone\" --send-clipboard"
+alias ip-list="kdeconnect-cli -l"
+alias ip-refresh="kdeconnect-cli --refresh"
