@@ -7,12 +7,13 @@ blueman
 bluez
 bluez-utils
 brightnessctl
+catch2
 chromium
 clang
 copyq
 cursor-bin
 docker
-docker-desktop
+docker-compose
 dolphin
 dunst
 efibootmgr
@@ -29,6 +30,7 @@ hyprlock
 hyprpaper
 iwd
 jdk-openjdk
+jq
 kde-cli-tools
 kdeconnect
 kimageformats
@@ -36,6 +38,7 @@ kitty
 kolourpaint
 libheif
 libpulse
+libreoffice-fresh
 linux
 linux-firmware
 ly
@@ -73,6 +76,7 @@ tmux
 ttf-jetbrains-mono-nerd
 unzip
 uwsm
+valgrind
 vim
 vlc
 vlc-plugins-all
