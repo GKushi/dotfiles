@@ -1,8 +1,11 @@
 amd-ucode
 android-studio
+azcopy
+azure-cli
 base
 base-devel
 beekeeper-studio-bin
+bind
 blueman
 bluez
 bluez-utils
@@ -20,14 +23,18 @@ efibootmgr
 exfatprogs
 fastfetch
 firefox
+ghostscript
 git
 glfw
+google-chrome
 grim
 gst-plugin-pipewire
 htop
+httptoolkit-bin
 hyprland
 hyprlock
 hyprpaper
+img2pdf
 iwd
 jdk-openjdk
 jq
@@ -41,6 +48,7 @@ libpulse
 libreoffice-fresh
 linux
 linux-firmware
+lua
 ly
 man-db
 nano
@@ -59,6 +67,7 @@ pipewire-pulse
 polkit-kde-agent
 postgresql
 postman-bin
+proton-vpn-cli
 qt5-wayland
 qt6-imageformats
 qt6-wayland
@@ -68,6 +77,7 @@ rsync
 slurp
 smartmontools
 sof-firmware
+systemd-resolvconf
 tcpdump
 tesseract-data-eng
 tesseract-data-pol

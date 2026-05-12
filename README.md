@@ -12,3 +12,4 @@ yay -Qm > aurlist.txt
 
 ## Next ideas
 - Disk encryption
+- Migrate hyprland configs to Lua
