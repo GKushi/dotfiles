@@ -1,103 +1,107 @@
 {
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": false,
-         "warp-on-scroll": false,
-         "format": "{id}:{icon}",
-         "format-icons": { 
-             "active": "",
-             "default": ""
-         }
-     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
+    "hyprland/workspaces": {
+      "format": "{id}",
+      "disable-scroll": true,
+      "all-outputs": false,
+      "warp-on-scroll": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰐨",
+            "deactivated": ""
         },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "tooltip-format-activated": "Presentation mode",
+        "tooltip-format-deactivated": "Normal mode"
+    },
+    "tray": {
+        "spacing": 0
     },
     "clock": {
-	"format": "{:%H:%M %d.%m}",
-        "tooltip-format": "{calendar}",
-	"format-alt": "{:%H:%M %d.%m.%Y}",
-	"calendar": {
-	    "mode"          : "month",
-	    "mode-mon-col"  : 3,
-	    "weeks-pos"     : "right",
-	    "on-scroll"     : 1,
-	    "format": {
-		      "today":      "<span color='#ffffff'><b><u>{}</u></b></span>"
-	    }
-	},
-        "actions": {
-	   "on-click-right": "mode",
-	   "on-scroll-up": "shift_up",
-	   "on-scroll-down": "shift_down"
+        "interval": 1,
+        "format": "{:%H:%M %A, %B %d}",
+        "tooltip-format": "{:%Y %B}\n<span font_family='Geist Mono, JetBrainsMono Nerd Font, monospace' size='10000'>{calendar}</span>",
+        "format-alt": "{:%T %d.%m.%Y}",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "none",
+            "on-scroll": 1,
+            "iso8601": true,
+            "format": {
+                "months":   "<span color='#e8e8eb'><b>{}</b></span>",
+                "days":     "<span color='#b5b5b8'>{}</span>",
+                "weekdays": "<span color='#454546'><b>{}</b></span>",
+                "today":    "<span color='#ff3333'><b>{}</b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
         }
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "interval": 20,
+        "format": "",
     },
     "memory": {
-        "format": "{used}GB ",
-        "tooltip": false
+        "format": "",
+        "tooltip-format": "Memory used: {percentage}% ({used}GB)\nAvailable: {avail}GB\nTotal: {total}GB"
     },
     "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", "", ""],
-        "tooltip": false
+        "interval": 20,
+        "format": "{icon}",
+        "format-icons": ["", "", "", ""],
+        "tooltip-format": "CPU temperature: {temperatureC}°C"
     },
     "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip": false
+        "format": "{icon}",
+        "format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
+        "tooltip-format": "Brightness: {percent}%"
     },
     "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 40,
+            "critical": 20
+        },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+        "format-charging": "{capacity}% {icon}󱐋",
+        "format-plugged": "{capacity}% {icon}",
+        "tooltip-format": "Capacity: {capacity}%\nConsumption: {power}W\n{timeTo}",
+        "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰂁", "󰁹"]
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}",
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
     },
     "network": {
-        "format-wifi": "{signalStrength}% {icon}",
-        "tooltip-format": "{essid}\n{ifname}: {ipaddr}/{cidr}",
-        "format-linked": "{signalStrength}% {icon} (No IP)",
-        "format-disconnected": "Not connected 󰤮",
-	"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈁",
+        "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nSSID: {essid}\nSignal strength: {signalStrength}%\nFrequency: {frequency}GHz",
+        "format-linked": "󰌷",
+        "format-disconnected": "󰈂",
+        "format-disabled": "󰈂",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "󰖁 {icon} {format_source}",
+        "format-bluetooth": "{volume}%  {icon} {format_source}",
+        "format-bluetooth-muted": " 󰖁 {format_source}",
         "format-muted": "󰖁 {format_source}",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "headphone": "",
-            "headset": "",
+            "headphone": "󰋋",
+            "headset": "󰋋",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "tooltip": false

@@ -8,13 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# start tmux automatically
-ZSH_TMUX_AUTOSTART=true
-
-# name of your default session
-ZSH_TMUX_DEFAULT_SESSION_NAME="main"
+ZSH_THEME="awesomepanda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -66,7 +60,15 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
+HISTSIZE=50000
+SAVEHIST=50000
+HISTFILE=~/.zsh_history
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -76,7 +78,11 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode tmux)
+plugins=(
+git
+zsh-syntax-highlighting
+vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,8 +99,19 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='nvim'
 # fi
-fastfetch
 source /usr/share/nvm/init-nvm.sh
+fastfetch
+
+# Logout out of TTY after 180s of inactivity
+if [[ "$TERM" == "linux" ]]; then
+    export TMOUT=180
+    TRAPALRM() {
+        logout
+    }
+fi
+
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]='none'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -110,7 +127,6 @@ source /usr/share/nvm/init-nvm.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
 alias rbwp="rbw get --clipboard"
 alias rbwu="rbw get --clipboard --field username"
 alias rbwl="rbw list | grep"
@@ -120,3 +136,4 @@ alias ip-share-text="kdeconnect-cli -n \"Kasper iPhone\" --share-text"
 alias ip-share-clipboard="kdeconnect-cli -n \"Kasper iPhone\" --send-clipboard"
 alias ip-list="kdeconnect-cli -l"
 alias ip-refresh="kdeconnect-cli --refresh"
+

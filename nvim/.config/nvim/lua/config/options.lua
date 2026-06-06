@@ -1,69 +1,45 @@
--- Global base options and keymaps
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.o.number = true
 
--- Print the line number in front of each line
-vim.opt.number = true
+vim.o.relativenumber = false
 
--- Use relative line numbers, so that it is easier to jump with j, k. This will affect the 'number'
-vim.opt.relativenumber = true
-
-vim.opt.mouse = "a"
-
-vim.opt.showmode = false
-
--- Disable netrw bc own plugin is used
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- Sync clipboard between OS and Neovim. Schedule the setting after `UiEnter` because it can
--- increase startup-time.
 vim.api.nvim_create_autocmd("UIEnter", {
   callback = function()
-    vim.opt.clipboard = "unnamedplus"
+    vim.o.clipboard = "unnamedplus"
   end,
 })
 
--- Keep indentation at line breaks
-vim.opt.breakindent = true
+vim.o.undofile = true
 
--- Save undo history
-vim.opt.undofile = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.signcolumn = "yes"
 
--- Keep additional sign column on the left
-vim.opt.signcolumn = "yes"
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
 
--- Perform updates faster
-vim.opt.updatetime = 250
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.opt.timeoutlen = 300
+vim.o.cursorline = true
+vim.o.scrolloff = 5
 
--- Position for new windows
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Show <tab> and trailing spaces
-vim.opt.list = true
+vim.o.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
-vim.opt.inccommand = "split"
+vim.o.inccommand = "split"
 
--- Highlight the line where the cursor is on
-vim.opt.cursorline = true
+vim.o.confirm = true
 
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 5
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
--- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
--- instead raise a dialog asking if you wish to save the current file(s) See `:help 'confirm'`
-vim.opt.confirm = true
+vim.o.termguicolors = true
 
--- Highlight when yanking (copying) text.
--- Try it with `yap` in normal mode. See `:h vim.hl.on_yank()`
+vim.opt.showmode = false
+
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
   callback = function()
@@ -71,8 +47,26 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Clear search highlight in normal
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostick [Q]uickfix list" })
+
+vim.diagnostic.config({
+  severity_sort = true,
+  float = { border = "rounded", source = "if_many" },
+  underline = { severity = vim.diagnostic.severity.ERROR },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "󰅚 ",
+      [vim.diagnostic.severity.WARN] = "󰀪 ",
+      [vim.diagnostic.severity.INFO] = "󰋽 ",
+      [vim.diagnostic.severity.HINT] = "󰌶 ",
+    },
+  },
+  virtual_text = false,
+  virtual_lines = {
+    current_line = true,
+  },
+})

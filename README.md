@@ -9,7 +9,3 @@ Regenerate with:
 pacman -Qqe > pkglist.txt
 yay -Qm > aurlist.txt
 ```
-
-## Next ideas
-- Disk encryption
-- Migrate hyprland configs to Lua
