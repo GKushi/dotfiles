@@ -1,0 +1,6 @@
+[Unit]
+Description=Clear yay cache
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/yay -Sc --aur --noconfirm

@@ -2,4 +2,4 @@
 Description=Battery level notification
 
 [Service]
-ExecStart=%h/.local/bin/battery_notify.sh
+ExecStart=%h/.local/bin/battery_notify.sh %h/.local/share/sounds/warning.mp3
