@@ -1,5 +1,5 @@
 otf-geist 1.8.0-1
 otf-geist-mono 1.8.0-1
-yay-bin 12.5.7-1
-yay-bin-debug 12.5.7-1
+yay-bin 12.6.0-1
+yay-bin-debug 12.6.0-1
 zen-browser-bin 1.20.2b-1

@@ -5,12 +5,15 @@ bluez-utils
 brightnessctl
 btop
 chromium
+clang
+cmake
 copyq
 dmidecode
 dolphin
 dunst
 e2fsprogs
 efibootmgr
+exfatprogs
 fastfetch
 feh
 fzf
@@ -61,6 +64,7 @@ rsync
 slurp
 sof-firmware
 sudo
+systemd-resolvconf
 tesseract
 tesseract-data-pol
 thermald
@@ -79,11 +83,11 @@ vlc-plugins-all
 vulkan-intel
 waybar
 wget
+wireguard-tools
 wl-clipboard
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay-bin
-yay-bin-debug
 zathura
 zathura-pdf-mupdf
 zen-browser-bin
