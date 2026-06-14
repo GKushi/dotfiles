@@ -30,6 +30,7 @@ intel-media-driver
 intel-ucode
 inter-font
 iwd
+jq
 kitty
 libnotify
 libva-utils
@@ -77,6 +78,7 @@ ttf-liberation
 ufw
 unzip
 usbutils
+valgrind
 vim
 vlc
 vlc-plugins-all

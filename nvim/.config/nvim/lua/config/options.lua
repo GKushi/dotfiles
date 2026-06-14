@@ -37,6 +37,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.o.termguicolors = true
+vim.opt.hlsearch = true
 
 vim.opt.showmode = false
 
@@ -52,6 +53,11 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostick [Q]uickfix list" })
+
+vim.keymap.set("n", "<Up>", "<Nop>", { noremap = true })
+vim.keymap.set("n", "<Down>", "<Nop>", { noremap = true })
+vim.keymap.set("n", "<Left>", "<Nop>", { noremap = true })
+vim.keymap.set("n", "<Right>", "<Nop>", { noremap = true })
 
 vim.diagnostic.config({
   severity_sort = true,

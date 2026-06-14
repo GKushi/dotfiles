@@ -6,6 +6,7 @@ local lsp_servers = {
     },
   },
   pyright = {},
+  taplo = {},
 }
 
 -- Linters, formatters etc.
@@ -17,7 +18,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
   callback = function(event)
     vim.keymap.set("n", "grD", vim.lsp.buf.declaration, { buffer = event.buf, desc = "LSP: [G]oto [D]eclaration" })
-    vim.keymap.set("n", "grd", vim.lsp.buf.definition, { buffer = event.buf, desc = "LSP: [G]oto [D]eclaration" })
+    vim.keymap.set("n", "grd", vim.lsp.buf.definition, { buffer = event.buf, desc = "LSP: [G]oto [D]efinition" })
   end,
 })
 
