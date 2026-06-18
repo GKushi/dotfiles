@@ -7,5 +7,5 @@ Regenerate with:
 
 ```bash
 pacman -Qqe > pkglist.txt
-yay -Qm > aurlist.txt
+yay -Qmq > aurlist.txt
 ```
