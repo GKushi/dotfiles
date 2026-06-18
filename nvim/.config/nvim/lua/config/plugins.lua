@@ -1,5 +1,3 @@
-vim.cmd("packadd! nohlsearch")
-
 -- For plugins that require building
 vim.api.nvim_create_autocmd("PackChanged", {
   callback = function(ev)
